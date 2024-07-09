@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración Romántica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #d83a87;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>¡Hola mi niña!</h1>
+        <p>Querida Estefania de mi corazón,</p>
+        <p>Desde que te conocí, mi vida ha sido mucho más brillante. Eres la persona más increíble y especial que he conocido, aunque llevamos poco tiempo conociendonos siento que hemos conectado muy bonito y hoy quiero compartir algo muy importante contigo...</p>
+        <button onclick="mostrarMensaje()">puchale aqui👇</button>
+        <p id="mensaje" style="display: none; font-style: italic; margin-top: 20px;">Corazón, ¿quieres ser mi novia?</p>
+        <div id="opciones" style="display: none;">
+            <button onclick="respuesta('si')">Sí</button>
+            <button onclick="respuesta('no')">No</button>
+        </div>
+        <p id="respuesta" style="display: none; font-weight: bold; margin-top: 20px;"></p>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            document.getElementById('mensaje').style.display = 'block';
+            document.getElementById('opciones').style.display = 'block';
+        }
+
+        function respuesta(res) {
+            var respuesta = document.getElementById('respuesta');
+            if (res === 'si') {
+                respuesta.textContent = 'Te amo mi niña, no te arrepentiras😘';
+            } else if (res === 'no') {
+                respuesta.textContent = '😞';
+            }
+            respuesta.style.display = 'block';
+            document.getElementById('opciones').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
